@@ -1,0 +1,106 @@
+.last
+{
+    display: grid;
+    grid-template-columns: 1fr 1.5fr;
+    column-gap: 30px;
+}
+
+.container .left-side .imgcon
+{
+    background: var(--img) no-repeat center center;
+    background-color: rgba(96, 96, 245, 0.171);
+    background-size: 65%;
+    height: 230px;
+    width: 230px;
+    border-radius: 50%;
+    margin-bottom: 20px;
+    margin-inline: auto;
+}
+
+.container .left-side .user-info
+{
+    display: flex;
+    align-items: stretch;
+    justify-content: center;
+    flex-direction: column;
+    box-shadow: 1px 5px 10px rgba(96, 96, 245, 0.371);
+    gap: 20px;
+    border-radius: 20px;
+}
+
+.user-info div
+{
+    display: grid;
+    place-items: center;
+    padding: 7px;
+    font-family: Helvetica, sans-serif;
+    letter-spacing: 1.1px;
+}
+
+.user-info div:nth-child(2n-1)
+{
+    color: rgba(96, 96, 245, 1);
+    font-weight: bold;
+}
+
+.user-info .role.admin span
+{
+    padding: 7px;
+    border-radius: 20px;
+    background-color: orange;
+    color: white;
+} 
+
+.user-info .role.client span
+{
+    padding: 7px;
+    border-radius: 20px;
+    background-color: yellowgreen;
+    color: white;
+} 
+
+
+.user-info .status.active span
+{
+    padding: 7px;
+    border-radius: 20px;
+    background-color: yellowgreen;
+    color: white;
+}
+
+.user-info .status.inactive span
+{
+    padding: 7px;
+    border-radius: 20px;
+    background-color: red;
+    color: white;
+}
+
+
+.session-table
+{
+    display: flex;
+    align-items: stretch;
+    flex-direction: column;
+    justify-content: start;
+    gap: 10px;
+    padding: 20px;
+}
+
+.se-element:first-child
+{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    background-color: rgba(96, 96, 245, 0.473);
+    padding: 10px;
+    color: white;
+}
+
+
+.se-element
+{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    box-shadow: 1px 5px 10px rgba(0, 0, 0, .2);
+    padding: 20px;
+}

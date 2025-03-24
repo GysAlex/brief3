@@ -1,0 +1,734 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+*{
+    font-family: 'Poppins', 'Helvetica';
+}
+
+body{
+    min-height: 100vh;
+}
+
+.loginForm
+{
+    width: 500px !important;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    padding: 30px;
+    padding-inline: 30px !important;
+    border-radius: 20px;
+    box-shadow: 1px 5px 10px rgba(0, 0, 0, .1);
+}
+
+/* footer{
+    position: sticky;
+    top: 100%;    
+} */
+
+form input[type=submit]
+{
+    background-color: rgb(96, 96, 245) !important;
+    color: white;
+    transition: all ease .4s !important;
+    transition-delay: .2s;
+    font-weight: bold;
+}
+
+form input[type=submit]:hover
+{
+    background-color: rgb(241, 235, 235) !important;
+    color: blue !important;
+}
+
+a.nav-link.active
+{
+    font-weight: bold;
+    background-color: rgb(96, 96, 245);
+    color: white;
+    border-radius: 20px;
+}
+
+div.alert
+{
+    font-size: .8em;
+}
+
+.p-banner
+{
+    height: 350px;
+    position: relative;
+    background: url('images/banner.jpg') no-repeat;
+    background-size: cover;
+    background-position-y: 30%;
+    margin-bottom: 300px;
+}
+
+.p-inner
+{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background: linear-gradient(0deg, rgba(2, 2, 136, 0.85)0%, rgba(2, 2, 136, 0.85) 100%);
+}
+
+.overlap
+{
+    position: absolute;
+    bottom: -30%;
+    height: 200px;
+    background-color: transparent;
+    width: 100%;
+}
+
+.p-inner-overlap
+{
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: 1fr;
+    width: 100%;
+    height: 100%;
+    column-gap: 40px;
+}
+
+.p-inner-overlap .in_overlap
+{
+    background-color: white;
+    height: 100%;
+    border-radius: 20px;
+    box-shadow: 1px 5px 10px rgba(0, 0, 0, .1);
+    
+}
+
+.p-inner .content 
+{
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+    flex-direction: column;
+}
+
+.content .greeting
+{
+    font-size: 2.5em;
+    color: white;
+    text-transform: capitalize;
+    text-shadow: 2px 2px 7px rgba(202,195,197,0.78);
+}
+.content .smalltext
+{
+    max-width: 400px;
+    color: white;
+    text-shadow: 2px 2px 7px rgba(202,195,197,0.78);
+}
+
+.content .cta button, .in_overlap:first-child .el-item button, .history button
+{
+    border: none;
+    height: 35px;
+    background-color: rgb(96, 96, 245);
+    color: white;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    column-gap: 10px;
+    margin-top: 30px;
+    border-radius: 10px;
+}
+
+.in_overlap:first-child
+{
+    display: flex;
+    align-items: stretch;
+    justify-content: start;
+    flex-direction: column;
+    row-gap: 10px;
+}
+
+
+.in_overlap:first-child .el-item button
+{
+    margin-top: unset;
+}
+
+.in_overlap:first-child .el-item span:first-child
+{
+    font-weight: bold;
+}
+
+.in_overlap:first-child .el-item
+{
+    padding: 15px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    place-items: center start;
+    column-gap: 15px;
+}
+
+.in_overlap:first-child .el-item .p-info
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: stretch;
+    width: 100%;
+    row-gap: 5px;
+}
+
+.in_overlap:first-child .el-item .p-info .p-label
+{
+    color: rgb(96, 96, 245);
+    font-size: .94em;
+    font-weight: 500;
+}
+
+.in_overlap:first-child .el-item .p-info .p-inside
+{
+    background-color: rgb(96, 96, 245);
+    width: 100%;
+    padding: 10px;
+    color: white;
+    letter-spacing: 2px;
+    border-radius: 5px;
+}
+
+.in_overlap:first-child .el-item .title
+{
+    font-weight: bold;
+}
+
+
+.in_overlap:first-child .el-item:first-child
+{
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgb(219, 219, 243);
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.in_overlap:first-child .el-item:nth-child(2)
+{
+    height: 40px;
+}
+
+.in_overlap:last-child 
+{
+    position: relative;
+}
+
+.in_overlap:last-child .img-container
+{
+    position: absolute;
+    width: 150px;
+    height: 150px;
+    z-index: 10;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: white;
+    border-radius: 50%;
+    top: -15%;
+    background: var(--img) no-repeat center center;
+    background-size: cover;
+}
+
+.in_overlap:last-child .otherInfo
+{
+    margin-top: 120px;
+    padding: 10px;
+}
+
+.in_overlap:last-child .history
+{
+    padding: 10px;
+    display: grid;
+    place-items: center start;
+    margin-top: -20px; 
+}
+
+.in_overlap:last-child .otherInfo .name
+{
+    display: grid;
+    place-items: center;
+    padding: 10px;
+    color: rgb(96, 96, 245);
+    letter-spacing: 1.5px;
+    font-weight: 600;
+}
+
+.in_overlap:last-child .otherInfo .status
+{
+    margin-top: 16px;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    column-gap: 10px;
+    text-transform: capitalize;
+    background-color: rgb(219, 219, 243);
+    border-radius: 10px;
+}
+
+.in_overlap:last-child .otherInfo .status span:first-child
+{
+    font-weight: bold;
+}
+
+.in_overlap:last-child .otherInfo .status span:last-child
+{
+    text-transform: lowercase;
+    color: rgb(96, 96, 245);
+    font-weight: bold;
+    letter-spacing: 1.4px;
+
+}
+
+.footer
+{
+    height: 150px !important;
+    position: static;
+    width: 100%;
+    background-image: linear-gradient(white 70%, gray 30%) ;
+}
+
+
+
+@media (max-width: 876px) 
+{
+    .in_overlap:first-child .el-item
+    {
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(2, 1fr);
+    }
+
+    .in_overlap:first-child
+    {
+        row-gap: 0px;
+    }
+}
+
+@media (max-width: 992px)  
+{
+    .p-inner-overlap
+    {
+        grid-template-rows: 2fr 1fr;
+        grid-template-columns: 1fr;
+        row-gap: 80px;
+        margin-bottom: 40px;
+    }     
+    
+    .p-banner
+    {
+        margin-bottom: 600px;
+    }
+
+    @media (max-width: 876px)
+    {
+        .p-banner
+        {
+            margin-bottom: 750px;
+        }
+    } 
+}
+
+
+/* for the modal */
+
+
+#searchModal
+{
+    position: fixed;
+    width: 100dvw;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 100dvh;
+    opacity: 0;
+    transform-origin: center;
+    background-color: rgba(96, 96, 245, 0.473);
+    z-index: 100;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    transition-behavior: allow-discrete;
+    transition-property: display width height;
+    transition-duration: .4s;
+
+}
+
+#searchModal.showF
+{
+    width: 100dvw;
+    height: 100dvh;
+    opacity: 1;
+    display: flex;
+}
+
+#searchModal .content
+{
+    height: 70%;
+    width: 40%;
+    display: none;
+    background-color: white;
+    border-radius: 10px;
+    position: relative;
+    transition-behavior: allow-discrete;
+    transition-property: display transform;
+    transition-duration: .4s;
+    transform: translateX(50dvw); 
+}
+
+
+#searchModal.showF .content
+{
+    display: unset;
+    transform: translateY(0);
+    height: 70%;
+    width: 40%;
+    min-width: 350px;
+
+    @starting-style{
+        transform: translateY(50dvh); 
+        width: 0;
+        height: 0;
+    }
+}
+
+#searchModal .content .closeButton
+{
+    position: absolute;
+    width: 35px;
+    height: 35px;
+    background-color: rgb(96, 96, 245);
+    border-radius: 50%;
+    top: -30px;
+    right: -30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    border: none;
+    font-size: 1.1em;
+}
+
+#searchModal .results
+{
+    width: 90%;
+    height: 70%;
+    max-height: 70%;
+    overflow-y: auto;
+    margin-inline: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+}
+
+#searchModal .results .img-cont
+{
+    width: 60px;
+    height: 60px;
+}
+
+#searchModal .results .img-cont img
+{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+
+#searchModal .results .res-item
+{
+    background-color: #f2f1f798;
+    border-radius: 10px;
+}
+
+#searchModal label
+{
+    font-size: .9em !important;
+}
+
+/*end of modal*/
+
+
+.a-title
+{
+    margin-top: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: rgb(96, 96, 245);
+    flex-wrap: wrap;
+}
+
+.a-title .message
+{
+    font-size: 1.1em;
+    color: white;
+    font-weight: 700;
+    padding-block: 30px;
+}
+
+.a-someactions
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.a-someactions .searching input
+{
+    height: 45px;
+    border: none;
+    padding: 10px;
+    color: rgb(96, 96, 245);
+    font-weight: 400;
+    background: url('images/search.svg') no-repeat;
+    background-color: white;
+    background-size: 20px;
+    border-radius: 5px;
+    background-position-x: 95%;
+    background-position-y: center;
+}
+
+.a-someactions .adding button
+{
+    height: 45px;
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    background-color: white;
+    color: rgb(96, 96, 245);
+}
+
+.a-someactions .adding button span:first-child
+{
+    font-size: 1.4em;
+}
+
+.a-usertable
+{
+    background-color: rgba(96, 96, 245, 0.14);
+    padding-top: 20px;
+    padding-bottom: 20px;
+
+}
+
+.a-usertable .header
+{
+    display: grid;
+    grid-template-columns: 1.2fr .8fr .8fr 1fr 1.2fr ;
+    padding-bottom: 10px;
+}
+
+.a-usertable .header div
+{
+    font-weight: 700;
+    letter-spacing: 1px;
+    color: rgb(96, 96, 245);
+}
+
+.a-usertable .header .name, .a-usertable .header .actions 
+{
+    padding-left: 10px;
+}
+
+
+.a-usertable .result-number
+{
+    background-color: white;
+    padding-block: 8px;
+    border-radius: 10px;
+    padding-left: 10px;
+    color: rgba(66, 64, 64, 0.349);
+    text-transform: capitalize;
+    font-weight: 600;
+    font-size: .8em;
+}
+
+.a-usertable .tableUser 
+{
+    display: flex;
+    align-items: stretch;
+    flex-direction: column;
+    justify-content: start;
+    row-gap: 10px;
+    margin-top: 15px;
+}
+
+.a-usertable .tableUser .item
+{
+    display: grid;
+    grid-template-columns: 1.2fr .8fr .8fr 1fr 1.2fr ;
+    grid-template-rows: 1fr;
+    background-color: white;
+    padding-block: 6px;
+}
+
+.a-usertable .tableUser .item .lastlogin
+{
+    color: rgba(66, 64, 64, 0.749);
+    font-size: .9em;
+}
+
+.a-usertable .tableUser .item .name .text
+{
+    color: rgba(66, 64, 64, 0.849);
+    font-size: .9em;
+    font-weight: 600;
+    text-transform: capitalize;
+}
+
+.a-usertable .tableUser .item div
+{
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    gap: 15px;
+}
+
+.a-usertable .tableUser .item .name
+{
+    padding-left: 10px;
+}
+
+.a-usertable .tableUser .item .imgcon
+{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: var(--img) no-repeat center center;
+    background-size: cover;
+    background-color: white;
+}
+
+
+.a-usertable .tableUser .item .action
+{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.a-usertable .tableUser .item .action button
+{
+    border: none;
+    background-color: transparent;
+    color: rgb(96, 96, 245);
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.a-usertable .tableUser .item .role.admin span
+{
+    background-color: rgba(255, 166, 0, 0.664);
+    padding: 8px;
+    color: white;
+    border-radius: 20px;
+}
+
+.a-usertable .tableUser .item .role.client span
+{
+    background-color: greenyellow;
+    padding: 8px;
+    color: white;
+    border-radius: 20px;
+}
+
+.a-usertable .tableUser .item .status.inactive span
+{
+    background-color: rgba(255, 0, 0, 0.938);
+    color: white;
+    font-weight: 600;
+    padding: 7px;
+
+}
+
+.a-usertable .tableUser .item .status.active span
+{
+    background-color: greenyellow;
+    color: white;
+    font-weight: 600;
+    padding: 7px;
+}
+
+@media (max-width: 1024px) 
+{
+    .header .status
+    {
+        display: none;
+    }
+    
+    .a-usertable .tableUser .item .status
+    {
+        display: none;
+    }
+
+    .header .role
+    {
+        display: none;
+    }
+    
+    .a-usertable .tableUser .item .role
+    {
+        display: none;
+    }
+    
+    .a-usertable .header
+    {
+        grid-template-columns: 1.2fr  1fr 1.2fr ;
+    }
+
+    .a-usertable .tableUser .item
+    {
+        grid-template-columns: 1.2fr  1fr 1.2fr ;
+    }
+
+    @media (max-width: 790px) 
+    {
+        .a-usertable .tableUser .item .action form span
+        {
+            display: none;
+        }
+
+        .a-usertable .tableUser .item .lastlogin
+        {
+            display: none;
+        }
+
+
+        .a-usertable .header
+        {
+            grid-template-columns: 1fr 1fr ;
+        }
+    
+        .a-usertable .tableUser .item
+        {
+            grid-template-columns: 1fr 1fr ;
+        }
+
+        .a-someactions
+        {
+            margin-bottom: 20px;
+        }
+
+        .a-title .message
+        {
+            margin: 0 auto;
+        }
+    }
+
+
+}

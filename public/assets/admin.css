@@ -1,0 +1,258 @@
+/* for the modal */
+
+
+#searchModal
+{
+    position: fixed;
+    width: 100dvw;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 100dvh;
+    opacity: 0;
+    transform-origin: center;
+    background-color: rgba(96, 96, 245, 0.473);
+    z-index: 100;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    transition-behavior: allow-discrete;
+    transition-property: display width height;
+    transition-duration: .4s;
+
+}
+
+#searchModal.showF
+{
+    width: 100dvw;
+    height: 100dvh;
+    opacity: 1;
+    display: flex;
+}
+
+#searchModal .content
+{
+    height: 70%;
+    width: 40%;
+    display: none;
+    background-color: white;
+    border-radius: 10px;
+    position: relative;
+    transition-behavior: allow-discrete;
+    transition-property: display transform;
+    transition-duration: .4s;
+    transform: translateX(50dvw); 
+}
+
+
+#searchModal.showF .content
+{
+    display: unset;
+    transform: translateY(0);
+    height: 90%;
+    width: 40%;
+    min-width: 350px;
+
+    @starting-style{
+        transform: translateY(50dvh); 
+        width: 0;
+        height: 0;
+    }
+}
+
+#searchModal .content .closeButton
+{
+    position: absolute;
+    width: 35px;
+    height: 35px;
+    background-color: rgb(96, 96, 245);
+    border-radius: 50%;
+    top: -30px;
+    right: -30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    border: none;
+    font-size: 1.1em;
+}
+
+#searchModal .results
+{
+    width: 90%;
+    height: 70%;
+    max-height: 70%;
+    overflow-y: auto;
+    margin-inline: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+}
+
+#searchModal .results .img-cont
+{
+    width: 60px;
+    height: 60px;
+}
+
+#searchModal .results .img-cont img
+{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+
+#searchModal .results .res-item
+{
+    background-color: #f2f1f798;
+    border-radius: 10px;
+}
+
+#searchModal label
+{
+    font-size: .9em !important;
+}
+
+/*end of modal*/
+
+
+#searchModal2
+{
+    position: fixed;
+    width: 100dvw;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 100dvh;
+    opacity: 0;
+    transform-origin: center;
+    background-color: rgba(96, 96, 245, 0.473);
+    z-index: 100;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    transition-behavior: allow-discrete;
+    transition-property: display width height;
+    transition-duration: .4s;
+
+}
+
+#searchModal2.showF
+{
+    width: 100dvw;
+    height: 100dvh;
+    opacity: 1;
+    display: flex;
+}
+
+#searchModal2 .content
+{
+    height: 70%;
+    width: 40%;
+    display: none;
+    background-color: white;
+    border-radius: 10px;
+    position: relative;
+    transition-behavior: allow-discrete;
+    transition-property: display transform;
+    transition-duration: .4s;
+    transform: translateX(50dvw); 
+}
+
+
+#searchModal2.showF .content
+{
+    display: unset;
+    transform: translateY(0);
+    height: 90%;
+    width: 40%;
+    min-width: 350px;
+
+    @starting-style{
+        transform: translateY(50dvh); 
+        width: 0;
+        height: 0;
+    }
+}
+
+#searchModal2 .content .closeButton
+{
+    position: absolute;
+    width: 35px;
+    height: 35px;
+    background-color: rgb(96, 96, 245);
+    border-radius: 50%;
+    top: -30px;
+    right: -30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    border: none;
+    font-size: 1.1em;
+}
+
+#searchModal2 .results
+{
+    width: 90%;
+    height: 70%;
+    max-height: 70%;
+    overflow-y: auto;
+    margin-inline: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+}
+
+#searchModal2 .results .img-cont
+{
+    width: 60px;
+    height: 60px;
+}
+
+#searchModal2 .results .img-cont img
+{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+
+#searchModal2 .results .res-item
+{
+    background-color: #f2f1f798;
+    border-radius: 10px;
+}
+
+#searchModal2 label
+{
+    font-size: .9em !important;
+}
+
+/*end of modal*/
+
+.item.special
+{
+    display: none;
+    transition-behavior: allow discrete;
+    transition-property: display tranfrom opacity;
+    transition-duration: .5s;
+    opacity: 0;
+}
+
+.item.special2
+{
+    display: unset;
+    transform: translateX(0);
+    opacity: 1;
+    @starting-style{
+        transform: translateX(300px);
+        display: none;
+        opacity: 0;
+    }
+}
+
+
