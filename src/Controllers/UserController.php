@@ -26,6 +26,13 @@ class UserContoller
             exit();
         }
 
+        if(Auth::user() == "unactive")
+        {
+            setcookie('user_email', Auth::user()->getEmail(), time() + 30, "/login", "", false, true);
+            header("location: /login?fail=unactive");
+            exit();
+        }
+
         $username = Auth::user()->getUsername();
         $email = Auth::user()->getEmail();
         $status = Auth::user()->getStatus();
@@ -56,6 +63,13 @@ class UserContoller
         if(Auth::user() == false)
         {
             header("location: /login?forbi=1");
+            exit();
+        }
+
+        if(Auth::user() == "unactive")
+        {
+            setcookie('user_email', Auth::user()->getEmail(), time() + 30, "/login", "", false, true);
+            header("location: /login?fail=unactive");
             exit();
         }
 
@@ -256,6 +270,13 @@ class UserContoller
             exit();
         }
 
+        if(Auth::user() == "unactive")
+        {
+            setcookie('user_email', Auth::user()->getEmail(), time() + 30, "/login", "", false, true);
+            header("location: /login?fail=unactive");
+            exit();
+        }
+
         if (Auth::user()->getRole_id() != 1) 
         {
             header("location: /profile?forbi=1");
@@ -293,6 +314,13 @@ class UserContoller
         if(Auth::user() == false)
         {
             header("location: /login?forbi=1");
+            exit();
+        }
+
+        if(Auth::user() == "unactive")
+        {
+            setcookie('user_email', Auth::user()->getEmail(), time() + 30, "/login", "", false, true);
+            header("location: /login?fail=unactive");
             exit();
         }
 
@@ -368,6 +396,13 @@ class UserContoller
         if(Auth::user() == false)
         {
             header("location: /login?forbi=1");
+            exit();
+        }
+
+        if(Auth::user() == "unactive")
+        {
+            setcookie('user_email', Auth::user()->getEmail(), time() + 30, "/login", "", false, true);
+            header("location: /login?fail=unactive");
             exit();
         }
 

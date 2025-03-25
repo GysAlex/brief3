@@ -9,8 +9,6 @@ use App\Models\User;
 class AuthController 
 {
     private $viewPath = "../src/Views";
-    private $userMail;
-    private $attempts = 0;
 
     public function loginForm()
     {

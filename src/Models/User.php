@@ -421,7 +421,7 @@ class User
     public function sessions()
     {
 
-        $query = 'SELECT * FROM sessions WHERE user_id=:user_id';
+        $query = 'SELECT * FROM sessions WHERE user_id=:user_id ORDER BY id DESC';
 
         $stmt = $this->pdo->prepare($query);
 

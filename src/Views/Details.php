@@ -62,17 +62,17 @@ require_once "Elements/header.php";
                             <?php $d = strtotime($session->getLogin_time()); echo date("Y-m-d", $d)?>
                         </div>
                         <div class="start" style="text-transform: capitalize; font-weight: 600;">
-                            <?php $d = strtotime($session->getLogin_time()); echo date("H:i:sa", $d)?>
+                            <?php $d = strtotime($session->getLogin_time()); echo date("H:i:s", $d)?>
                         </div>
                         <div class="end" style="text-transform: capitalize; font-weight: 600;">
                             <?php 
                             
                             if(!$session->getLogout_time())
-                                echo "maintenant";
+                                echo "<span style='color: yellowgreen; font-weight: 500;'>maintenant</span>";
                             else
                             {
                                 $d = strtotime($session->getLogout_time()); 
-                                echo date("H:i:sa", $d);
+                                echo date("H:i:s", $d);
                             }                        
                             ?>
                         </div>
